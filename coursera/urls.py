@@ -18,10 +18,14 @@ from django.contrib import admin
 from django.urls import path
 
 from user.views import login_view, logout_view, register_view
+from course.views import course_list, course_details
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
     path('registration/', register_view, name='registration'),
+    # course app
+    path('courses/', course_list, name='course_list'),
+    path('courses/<int:pk>/', course_details, name='course_details'),
 ]

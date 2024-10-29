@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}List of courses{% endblock %}
+{% block content %}
+
+<h1>List of courses</h1>
+<ul>
+    {% for course in available_courses %}
+        <li>
+            <a href="{% url 'course_details' course.pk %}"><strong>{{ course.title }}</strong></a><br>
+            Duration: {{ course.duration }} weeks
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

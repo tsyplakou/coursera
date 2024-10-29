@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}List of courses{% endblock %}
+{% block content %}
+
+<h1>{{ course.title }}</h1>
+
+<p>{{ course.description }}</p>
+<p>{{ course.price }} $</p>
+<p>{{ course.duration }} weeks</p>
+
+{% endblock %}

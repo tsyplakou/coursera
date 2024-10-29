@@ -1,4 +1,108 @@
 p {
-	background-color: aqua;
-	font-weight: 600;
+	font-family: Arial, sans-serif;
+	font-size: 1.1em;
+	line-height: 1.6;
+	color: #333;
+	background-color: #f9f9f9;
+	padding: 15px;
+	border-radius: 8px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+	margin: 20px auto;
+	max-width: 600px;
+}
+
+p:hover {
+	background-color: #e3f2fd;
+	color: #1a237e;
+	transform: translateY(-4px);
+	box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+input {
+	width: 100%;
+	max-width: 400px;
+	padding: 12px 15px;
+	font-size: 1em;
+	color: #333;
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+	outline: none;
+	margin: 10px auto;
+	display: block;
+}
+
+input:focus {
+	border-color: #1a73e8;
+	background-color: #e3f2fd;
+	box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+	transform: translateY(-2px);
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #1a73e8;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #155bb5;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #0d47a1;
+    transform: translateY(1px);
+}
+
+a {
+    font-size: 1em;
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+a:hover {
+    color: #0d47a1;
+    border-bottom: 2px solid #0d47a1;
+}
+
+a:active {
+    color: #0b3c8c;
+    border-bottom: 2px solid #0b3c8c;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-width: 500px;
+}
+
+li {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 15px;
+    margin: 8px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+li:hover {
+    background-color: #e3f2fd;
+    transform: translateX(10px);
 }

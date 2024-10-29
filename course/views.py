@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 
 from .models import Course
 
@@ -17,6 +17,10 @@ def course_list(request):
 @login_required
 def course_details(request, pk):
     course = get_object_or_404(Course, pk=pk)
+
+    if course.user_courses.filter(user=request.user).exists():
+        return redirect('user_course_details', pk=pk)
+
     return render(
         request,
         'course_details.html',

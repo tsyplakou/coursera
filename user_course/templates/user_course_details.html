@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}List of courses{% endblock %}
+{% block content %}
+
+<h1>{{ course.title }}</h1>
+
+<p>{{ course.description }}</p>
+<p>{{ user_course.join_date }}</p>
+<p>{{ user_course.progress }} % / 100 %</p>
+
+{% endblock %}

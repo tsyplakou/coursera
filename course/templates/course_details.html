@@ -7,5 +7,32 @@
 <p>{{ course.description }}</p>
 <p>{{ course.price }} $</p>
 <p>{{ course.duration }} weeks</p>
+<p><a class="shakal" href="{% url 'course_purchase' course.pk %}">Buy</a></p>
+
+
+<style>
+.shakal {
+    font-size: 4em;
+    font-weight: bold;
+    text-decoration: none;
+    background: linear-gradient(90deg, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee);
+    background-size: 400%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: transform 0.3s ease;
+    animation: rainbow 5s infinite linear;
+}
+
+.shakal:hover {
+    transform: scale(1.2);
+}
+
+@keyframes rainbow {
+    0% { background-position: 0%; }
+    100% { background-position: 400%; }
+}
+
+</style>
 
 {% endblock %}

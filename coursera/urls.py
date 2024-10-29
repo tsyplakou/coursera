@@ -19,9 +19,13 @@ from django.urls import path
 
 from user.views import login_view, logout_view, register_view
 from course.views import course_list, course_details
+from .views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Add your URL patterns here.
+    path('', index, name='index'),
+    # user app
     path('login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
     path('registration/', register_view, name='registration'),

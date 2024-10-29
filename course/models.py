@@ -16,6 +16,9 @@ class Course(models.Model):
         help_text='Course duration in weeks',
     )
 
+    def __str__(self):
+        return self.title
+
 
 class Achievement(models.Model):
     course = models.ForeignKey(

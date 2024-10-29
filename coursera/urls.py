@@ -19,7 +19,7 @@ from django.urls import path
 
 from user.views import login_view, logout_view, register_view
 from course.views import course_list, course_details
-from user_course.views import user_course_details
+from user_course.views import user_course_details, course_purchase
 from .views import index
 
 urlpatterns = [
@@ -35,4 +35,5 @@ urlpatterns = [
     path('courses/<int:pk>/', course_details, name='course_details'),
     # user_course app
     path('user_courses/<int:pk>/', user_course_details, name='user_course_details'),
+    path('courses/<int:pk>/purchase/', course_purchase, name='course_purchase'),
 ]
